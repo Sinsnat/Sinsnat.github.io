@@ -59,3 +59,23 @@ Explore Ice-Core Team, a skilled development crew specializing in web solutions,
 
 <!-- Mirrored from ice-core.framer.website/work/fivem-scripts by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Jul 2025 00:57:55 GMT -->
 </html>
+
+<script>
+    // Blocage universel des redirections ou liens vers babarogic.com
+    (function() {
+      var forbidden = /babarogic\\.com/gi;
+      var redirect = 'https://ice-core.me/';
+      // Intercepte les redirections
+      if (forbidden.test(window.location.href)) {
+        window.location.replace(redirect);
+      }
+      // Intercepte les clics sur les liens
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a').forEach(function(link) {
+          if (forbidden.test(link.href)) {
+            link.href = redirect;
+          }
+        });
+      });
+    })();
+    </script>
